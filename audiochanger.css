@@ -1,0 +1,126 @@
+/* Style the main container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+}
+
+.centered-audio {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Style the audio player and playlist container */
+#audio-controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#playlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+/* Style the playlist buttons */
+#playlist button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#playlist button:hover {
+    background-color: #45a049;
+}
+
+/* Style the play/pause, rewind, and fast-forward buttons */
+#play-pause, #rewind, #fast-forward {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#play-pause:hover, #rewind:hover, #fast-forward:hover {
+    background-color: #0073A0;
+}
+
+/* Style the current time display */
+#current-time {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#audio-file-name {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+body, ul {
+    margin: 0;
+    padding: 0;
+}

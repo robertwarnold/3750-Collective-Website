@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Player App</title>
+    <link rel="stylesheet" href="audiochanger.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li class="dropdown">
+              <a href="#" class="dropbtn">Pages</a>
+              <div class="dropdown-content">
+                <a href="home.html">Home</a>
+                <a href="keypress.html">KeyPress</a>
+                <a href="ButtonMove.html">Moving</a>
+                <a href="sort_demo.html">Sort</a>
+                <a href="jquery.html">jQuery</a>
+                <a href="ajax.html">Ajax</a>
+                <a href="audiochanger.html">Audio Changer</a>
+                <a href="livesearch.html">Livesearch</a>
+                <a href="dmmt2.html">DMMT2</a>
+                <a href="fileioapp.html">PHP File I/O</a>
+                <a href="insert_form.html">Create DB</a>
+                <a href="seestore.php">Online Store</a>
+                <a href="examtwo.html">Exam #2</a>
+                <a href="usabilitytest.html">Usability Test</a>
+              </div>
+          </li>
+        </ul>
+    </nav>
+    <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/"; include($IPATH. "home.html"); ?>
+    <h1>Audio Player App</h1>
+    <audio id="audio-player" class="centered-audio" controls>
+        <source src="sample_audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="playlist">
+        <!-- Playlist items will be dynamically added here -->
+    </div>
+    <button id="rewind">Rewind 5s</button>
+    <button id="play-pause">Play</button>
+    <button id="fast-forward">Fast Forward 5s</button>
+    <button id="add-title">Add Title</button>
+    <button id="remove-title">Remove Title</button>
+    <div id="current-time">0:00</div>
+    <div id="audio-file-name"></div>
+    <script src="audiochanger.js"></script>
+</body>
+</html>

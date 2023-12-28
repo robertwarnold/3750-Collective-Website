@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JSON and AJAX</title>
+  <link rel="stylesheet" type="text/css" href="ajax.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="dropdown">
+          <a href="#" class="dropbtn">Pages</a>
+          <div class="dropdown-content">
+            <a href="home.html">Home</a>
+            <a href="keypress.html">KeyPress</a>
+            <a href="ButtonMove.html">Moving</a>
+            <a href="sort_demo.html">Sort</a>
+            <a href="jquery.html">jQuery</a>
+            <a href="ajax.html">Ajax</a>
+            <a href="audiochanger.html">Audio Changer</a>
+            <a href="livesearch.html">Livesearch</a>
+            <a href="dmmt2.html">DMMT2</a>
+            <a href="fileioapp.html">PHP File I/O</a>
+            <a href="insert_form.html">Create DB</a>
+            <a href="seestore.php">Online Store</a>
+            <a href="examtwo.html">Exam #2</a>
+            <a href="usabilitytest.html">Usability Test</a>
+          </div>
+      </li>
+    </ul>
+</nav>
+<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/"; include($IPATH. "home.html"); ?>
+  <div class="page-wrap">
+    <h1>Handlebars Tutorial</h1>
+    <div id="pets-container"></div>
+  </div>
+<!-- structuring for text output -->
+  <script id="petsTemplate" type="text/x-handlebars-template">
+    {{#each pets}}
+    <div class="pet">
+      <div class="photo-column">
+        <img src="{{photo}}">
+      </div>
+      <div class="info-column">
+        <h2>{{name}} <span class="species">({{species}})</span></h2>
+        <p>Age: {{calculateAge birthYear}}</p>
+        {{#if favFoods}}
+        <h4 class="headline-bar">Favorite Foods</h4>
+        <ul class="favorite-foods">
+          {{#each favFoods}}
+          <li>{{{this}}}</li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </div>
+    </div>
+    {{/each}}
+  </script>
+
+  <header>
+    <h1>JSON and AJAX</h1>
+    <button id="btn">Fetch Info for 3 New Animals</button>
+  </header>
+
+  <div id="animal-info"></div>
+
+  <script src="ajax.js"></script>
+</body>
+</html>
